@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly manifestVersion="1.0" xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1">
+  <asmv1:assemblyIdentity version="1.0.0.0" name="SetElasticsearchSettings.exe" publicKeyToken="dd81bf423f1d2ad4" language="neutral" processorArchitecture="x86" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="SetElasticsearchSettings" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+    <commandLine file="SetElasticsearchSettings.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet version="1" class="System.Security.NamedPermissionSet" Name="LocalIntranet" Description="Default rights given to applications on the local intranet" Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- UAC Manifest Options
+            If you want to change the Windows User Account Control level replace the 
+            requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            Specifying requestedExecutionLevel node will disable file and registry virtualization.
+            If you want to utilize File and Registry Virtualization for backward 
+            compatibility then delete the requestedExecutionLevel node.
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SetElasticsearchSettings.exe" size="178176">
+      <assemblyIdentity name="SetElasticsearchSettings" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>McN7dblt8hYu4crrEd38Od4wmKY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- A list of all Windows versions that this application is designed to work with. Windows will automatically select the most compatible environment.-->
+      <!-- If your application is designed to work with Windows 7, uncomment the following supportedOS node-->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}"/>-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN=CC\dzurikj" issuerKeyHash="2ef1e8f907f7ce9c151a216b08b06fa1bb9e2aa7" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>6eQTH7z2isbc4OKnf9D1fiBpLq0=</DigestValue></Reference></SignedInfo><SignatureValue>TtFZ/Gx9P4ZW/5PdUbnfOjhe/rCEK8H4s+XmvhJoernPTaftQ3NHplYzdvNbpBIve1Rb/OL0agbf5EqhTPVNKynSe8EdJNlGooAgAdEmDgHmD5KvKEdT0TxWItcAwjs1IZ4Ewsl00JSav72ya5dTXbLCTKuAoQm3y4uLN2mirwY=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>4cdcdCA/Pg9PF/xy9+YrZ9JwVzpcoiIlgG/gQbuNfptiy+EsBzeBUnR0IdgiaJff0zdkTOJZARv+44rtpQZnaGA63FthXSBSCN4LvbG8EMKFonCV6zYg7XtG1pthaAXdLluUExaCZk3T9jrrUvW41/NAFVWjulkXk/GJKmm4P9s=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="ad2e69207ef5d07fa7e2e0dcc68af6bc1f13e4e9" Description="" Url=""><as:assemblyIdentity version="1.0.0.0" name="SetElasticsearchSettings.exe" publicKeyToken="dd81bf423f1d2ad4" language="neutral" processorArchitecture="x86" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=CC\dzurikj</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>YFoQ/zKjn62ei0qDwI7vb2/wx1Q=</DigestValue></Reference></SignedInfo><SignatureValue>2bNuxLfGTP/smAt92yqfGF2M9Cug3x2N6p7UubMaC5tJu9819/rolGwQqqjdU2wyOLWYK/ztNavWo0r73qugORBULn6AYViceEC+JgRrmrMDgBcl9ZcYulJNEGZgOU4kQKlq9WSgQEuMnuh7AAsxrsnx5xVzq9XJekObhhsaHJ8=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>4cdcdCA/Pg9PF/xy9+YrZ9JwVzpcoiIlgG/gQbuNfptiy+EsBzeBUnR0IdgiaJff0zdkTOJZARv+44rtpQZnaGA63FthXSBSCN4LvbG8EMKFonCV6zYg7XtG1pthaAXdLluUExaCZk3T9jrrUvW41/NAFVWjulkXk/GJKmm4P9s=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIBwTCCASqgAwIBAgIQFBQKdI06N5VF3g2UdBOXMzANBgkqhkiG9w0BAQUFADAfMR0wGwYDVQQDHhQAQwBDAFwAZAB6AHUAcgBpAGsAajAeFw0xMTEyMjkyMDM5MTJaFw0xMjEyMjkwMjM5MTJaMB8xHTAbBgNVBAMeFABDAEMAXABkAHoAdQByAGkAawBqMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDhx1x0ID8+D08X/HL35itn0nBXOlyiIiWAb+BBu41+m2LL4SwHN4FSdHQh2CJol9/TN2RM4lkBG/7jiu2lBmdoYDrcW2FdIFII3gu9sbwQwoWicJXrNiDte0bWm2FoBd0uW5QTFoJmTdP2OutS9bjX80AVVaO6WReT8Ykqabg/2wIDAQABMA0GCSqGSIb3DQEBBQUAA4GBADwrwJ5UNIDPtrxEShDTNLbj05Ar9o1h4T+NNt3UoTBSGBkOsqz2Xw/2xIbdmNB/mJA+HitN7GFbcQ+Trvf2rc5S5JDMfcOfIPLI6PflgrL5eF7gqno9wJa8bJHwvTLHoQnDmQqMFcrr4Pa719hWizh+Fa33pMi0CQbNn3QTPLn4</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
