@@ -1,0 +1,45 @@
+<p><strong>This is a windows service installer and basic settings tool for ElasticSearch on windows. </strong></p>
+<p>This creates a windows installer program to install the windows service that just uses the java command line that would normally be created by elasticsearch.bat</p>
+<p>When starting the service it runs the command line and sends the output to a log file. The installer will not automatically start the service. I recommend using the setup tool before you start the service. </p>
+<p>The windows forms setup tool is for configuring environmental variables, creating log directories, setting permissions, opening firewall ports   and starting/stopping the windows service. </p>
+<p><strong>Prerequisite:</strong><br />
+  .net Framework 4<br />
+  Java</p>
+<p><strong>Install process</strong><br />
+  1.  You can basically put ElasticSearch in a directory on your system. <br />
+  2.	Take the ElasticsearchServiceSetup.msi from the output install it.<br />
+  3.	Start &gt; All Programs &gt; Elasticsearch Setup &gt; SetElasticsearchSettings.exe (Right click and run as administrator … Note this is important for it to work)</p>
+<p>This is a windows service installer and basic settings tool for ElasticSearch on windows. </p>
+<p>This creates a windows installer program to install the windows service that just uses the java command line that would normally be created by elasticsearch.bat</p>
+<p>When starting the service it runs the command line and sends the output to a log file. The installer will not automatically start the service. I recommend using the setup tool before you start the service. </p>
+<p>The windows forms setup tool is for configuring environmental variables, creating log directories, setting permissions, opening firewall ports   and starting/stopping the windows service. </p>
+<p>Prerequisite:<br />
+  .net Framework 4<br />
+  Java</p>
+<p>Install process<br />
+  1.	You can basically put ElasticSearch in a directory on your system. <br />
+  2.	Take the ElasticsearchServiceSetup.msi from the output install it.<br />
+  3.	Start &gt; All Programs &gt; Elasticsearch Setup &gt; SetElasticsearchSettings.exe (Right click and run as administrator … Note this is important for it to work)</p>
+<p>From there you can set your: <br />
+  environment variables JAVA_HOME, ES_HOME, ES_MIN_MEM, ES_MAX_MEM  (These work for the .bat as well)<br />
+  Save your variables … This will create a directory under ES_HOME for the service log files and give permissions to “NETWORK SERVICE” (This is the same account used for the windows service you can changes this as needed) on ES_HOME. </p>
+<p>You can optionally open firewall ports 54328 UDP, and 9200 and 9300 from the “Open Firewall Ports” button. </p>
+<p>And start and stop the windows service as well. </p>
+<p>There are things that I would have added like config file for the service so you can change the options without recompiling and an editor for the elasticsearch.yml to edit the configuration but I don’t have time for them. Any way this should make it easier to set up and install ElasticSearch on a windows server or PC. Hope this helps someone. </p>
+<p>J.</p>
+<p><br />
+  environment variables JAVA_HOME, ES_HOME, ES_MIN_MEM, ES_MAX_MEM  (These work for the .bat as well)<br />
+  Save your variables … This will create a directory under ES_HOME for the service log files and give permissions to “NETWORK SERVICE” (This is the same account used for the windows service you can changes this as needed) on ES_HOME. </p>
+<p>You can optionally open firewall ports 54328 UDP, and 9200 and 9300 from the “Open Firewall Ports” button. </p>
+<p>And start and stop the windows service as well. </p>
+<p>There are things that I would have added like config file for the service so you can change the options without recompiling and an editor for the elasticsearch.yml to edit the configuration but I don’t have time for them. Any way this should make it easier to set up and install ElasticSearch on a windows server or PC. Hope this helps someone. </p>
+
+
+
+ 
+
+
+
+ 
+
+
