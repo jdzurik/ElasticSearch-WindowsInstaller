@@ -127,7 +127,7 @@ namespace ElasticSearchService
 			 if ((e.Data != null) && (outputStream != null))
 			 {
 					//outputStream.WriteLine(e.Data + " - " + DateTime.Now.ToString()); // uncomment this line for debugging
-					outputStream.WriteLine("");
+					outputStream.Write("");
 			 }
     }
     private void OnErrorReceived(object Sender, DataReceivedEventArgs e)
@@ -135,7 +135,7 @@ namespace ElasticSearchService
 			 if ((e.Data != null) && (errorStream != null))
 			 {
 					//errorStream.WriteLine(e.Data + " - " + DateTime.Now.ToString());
-					errorStream.WriteLine();
+					errorStream.Write("");
 			 }
     }
   }
