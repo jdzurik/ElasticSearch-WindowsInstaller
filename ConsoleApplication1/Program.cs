@@ -43,7 +43,7 @@ namespace ConsoleApplication1
       StringBuilder sb = new StringBuilder();
       sb.AppendFormat("-Xms{0} ", ESMinM);
       sb.AppendFormat("-Xmx{0} ", ESMaxM );
-      sb.AppendFormat("-Xss128k ");
+      sb.AppendFormat("-Xss256k ");
       sb.AppendFormat("-XX:+UseParNewGC ");
       sb.AppendFormat("-XX:+UseConcMarkSweepGC ");
       sb.AppendFormat("-XX:+CMSParallelRemarkEnabled ");
@@ -54,6 +54,7 @@ namespace ConsoleApplication1
       sb.AppendFormat("-XX:+HeapDumpOnOutOfMemoryError ");
       sb.AppendFormat("-Delasticsearch ");
       sb.AppendFormat("-Des-foreground=yes ");
+      sb.AppendFormat("-Des.logging.console=false ");
       sb.AppendFormat("-Des.path.home=\"{0}\" ", ESHome);
       sb.AppendFormat("-cp \";{0}/lib/*;{0}/lib/sigar/*\" ", ESHome);
       sb.AppendFormat("\"org.elasticsearch.bootstrap.ElasticSearch\" ");
