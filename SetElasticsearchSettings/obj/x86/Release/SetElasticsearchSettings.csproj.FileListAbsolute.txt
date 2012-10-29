@@ -1,0 +1,16 @@
+C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\SetElasticsearchSettings\obj\x86\Release\Interop.NATUPNPLib.dll
+C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\SetElasticsearchSettings\obj\x86\Release\Interop.NETCONLib.dll
+C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\SetElasticsearchSettings\obj\x86\Release\Interop.NetFwTypeLib.dll
+C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\SetElasticsearchSettings\obj\x86\Release\SetElasticsearchSettings.csproj.ResolveComReference.cache
+C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\SetElasticsearchSettings\bin\Release\SetElasticsearchSettings.exe.manifest
+C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\SetElasticsearchSettings\bin\Release\SetElasticsearchSettings.application
+C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\SetElasticsearchSettings\bin\Release\SetElasticsearchSettings.exe
+C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\SetElasticsearchSettings\bin\Release\SetElasticsearchSettings.pdb
+C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\SetElasticsearchSettings\obj\x86\Release\SetElasticsearchSettings.Form1.resources
+C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\SetElasticsearchSettings\obj\x86\Release\SetElasticsearchSettings.Properties.Resources.resources
+C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\SetElasticsearchSettings\obj\x86\Release\SetElasticsearchSettings.csproj.GenerateResource.Cache
+C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\SetElasticsearchSettings\obj\x86\Release\SetElasticsearchSettings.TrustInfo.xml
+C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\SetElasticsearchSettings\obj\x86\Release\SetElasticsearchSettings.exe.manifest
+C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\SetElasticsearchSettings\obj\x86\Release\SetElasticsearchSettings.application
+C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\SetElasticsearchSettings\obj\x86\Release\SetElasticsearchSettings.exe
+C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\SetElasticsearchSettings\obj\x86\Release\SetElasticsearchSettings.pdb

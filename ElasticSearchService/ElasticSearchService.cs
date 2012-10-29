@@ -44,10 +44,10 @@ namespace ElasticSearchService
         fs.Close();
         fs.Dispose();
       }
-     outputStream = new StreamWriter(ESHome + @"\logs\WindowsServiceOuput.txt", true);
+     outputStream = new StreamWriter(ESHome + @"\logs\WindowsServiceOuput.txt", false); // change to true to keep after restart
      outputStream.AutoFlush = true;
-     errorStream = new StreamWriter(ESHome + @"\logs\WindowsServiceErrors.txt", true);
-     outputStream.AutoFlush = true;
+		 errorStream = new StreamWriter(ESHome + @"\logs\WindowsServiceErrors.txt", false); // change to true to keep after restart
+		 errorStream.AutoFlush = true;
       try
      {
 
@@ -62,12 +62,12 @@ namespace ElasticSearchService
       StringBuilder sb = new StringBuilder();
       sb.AppendFormat("-Xms{0} ", ESMinM);
       sb.AppendFormat("-Xmx{0} ", ESMaxM );
-      sb.AppendFormat("-Xss128k ");
+			sb.AppendFormat("-Xss256k ");
       sb.AppendFormat("-XX:+UseParNewGC ");
       sb.AppendFormat("-XX:+UseConcMarkSweepGC ");
-      sb.AppendFormat("-XX:+CMSParallelRemarkEnabled ");
-      sb.AppendFormat("-XX:SurvivorRatio=8 ");
-      sb.AppendFormat("-XX:MaxTenuringThreshold=1 ");
+			//sb.AppendFormat("-XX:+CMSParallelRemarkEnabled ");
+			//sb.AppendFormat("-XX:SurvivorRatio=8 ");
+			//sb.AppendFormat("-XX:MaxTenuringThreshold=1 ");
       sb.AppendFormat("-XX:CMSInitiatingOccupancyFraction=75 ");
       sb.AppendFormat("-XX:+UseCMSInitiatingOccupancyOnly ");
       sb.AppendFormat("-XX:+HeapDumpOnOutOfMemoryError ");
@@ -124,13 +124,19 @@ namespace ElasticSearchService
 
     private void OnDataReceived(object Sender, DataReceivedEventArgs e)
     {
-      if ((e.Data != null) && (outputStream != null))
-        outputStream.WriteLine(e.Data +" - "+DateTime.Now.ToString());
+			 if ((e.Data != null) && (outputStream != null))
+			 {
+					//outputStream.WriteLine(e.Data + " - " + DateTime.Now.ToString()); // uncomment this line for debugging
+					outputStream.WriteLine("");
+			 }
     }
     private void OnErrorReceived(object Sender, DataReceivedEventArgs e)
     {
-      if ((e.Data != null) && (errorStream != null))
-        errorStream.WriteLine(e.Data + " - " + DateTime.Now.ToString());
+			 if ((e.Data != null) && (errorStream != null))
+			 {
+					//errorStream.WriteLine(e.Data + " - " + DateTime.Now.ToString());
+					errorStream.WriteLine();
+			 }
     }
   }
 }

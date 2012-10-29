@@ -7,3 +7,10 @@ C:\SVN\ElasticSearchService\ElasticSearchService\obj\x86\Debug\GenerateResource.
 C:\SVN\ElasticSearchService\ElasticSearchService\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\SVN\ElasticSearchService\ElasticSearchService\obj\x86\Debug\ElasticSearchService.exe
 C:\SVN\ElasticSearchService\ElasticSearchService\obj\x86\Debug\ElasticSearchService.pdb
+C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\ElasticSearchService\obj\x86\Debug\ElasticSearchService.exe
+C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\ElasticSearchService\obj\x86\Debug\ElasticSearchService.pdb
+C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\ElasticSearchService\bin\Debug\ElasticSearchService.exe
+C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\ElasticSearchService\bin\Debug\ElasticSearchService.pdb
+C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\ElasticSearchService\obj\x86\Debug\ElasticSearchService.ElasticSearch.resources
+C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\ElasticSearchService\obj\x86\Debug\ElasticSearchService.ProjectInstaller.resources
+C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\ElasticSearchService\obj\x86\Debug\ElasticSearchService.csproj.GenerateResource.Cache
