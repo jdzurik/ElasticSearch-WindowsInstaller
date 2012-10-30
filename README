@@ -1,19 +1,19 @@
 This is a windows service installer and basic settings tool for ElasticSearch on windows. 
 
-This creates a windows installer program to install the windows service that just uses the java command line that would normally be created by elasticsearch.bat
+This creates a windows installer program to install the windows service that uses the java command line that would normally be created by elasticsearch.bat
 
 When starting the service it runs the command line and sends the output to a log file. The installer will not automatically start the service. I recommend using the setup tool before you start the service.    
 
-The windows forms setup tool is for configuring environmental variables, creating log directories, setting permissions, opening firewall ports   and starting/stopping the windows service. 
+The windows forms setup tool is for configuring environmental variables, creating log directories, setting permissions, opening firewall ports and starting/stopping the windows service. 
 
 Prerequisite:
 .net Framework 4
 Java
 
 Install process
-1.  You can basically put ElasticSearch in a directory on your system. 
-2.	Take the ElasticsearchServiceSetup.msi from the output install it.
-3.	Start > All Programs > Elasticsearch Setup > SetElasticsearchSettings.exe (Right click and run as administrator … Note this is important for it to work)
+1.  Extract ElasticSearch into a directory on your system. 
+2.  Take the ElasticsearchServiceSetup.msi from the output install it.
+3.  Start > All Programs > Elasticsearch Setup > SetElasticsearchSettings.exe (Shift + Right click and run as administrator … Note this is important for it to work)
 
 From there you can set your: 
 environment variables JAVA_HOME, ES_HOME, ES_MIN_MEM, ES_MAX_MEM  (These work for the .bat as well)
