@@ -1,0 +1,4 @@
+C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\ConsoleApplication1\bin\Release\ConsoleApplication1.exe
+C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\ConsoleApplication1\bin\Release\ConsoleApplication1.pdb
+C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\ConsoleApplication1\obj\x86\Release\ConsoleApplication1.exe
+C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\ConsoleApplication1\obj\x86\Release\ConsoleApplication1.pdb

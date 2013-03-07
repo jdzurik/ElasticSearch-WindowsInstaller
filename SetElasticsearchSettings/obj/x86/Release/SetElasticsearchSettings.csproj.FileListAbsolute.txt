@@ -14,3 +14,6 @@ C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\SetElasticsearchSettings\ob
 C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\SetElasticsearchSettings\obj\x86\Release\SetElasticsearchSettings.application
 C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\SetElasticsearchSettings\obj\x86\Release\SetElasticsearchSettings.exe
 C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\SetElasticsearchSettings\obj\x86\Release\SetElasticsearchSettings.pdb
+C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\SetElasticsearchSettings\obj\x86\Release\SetElasticsearchSettings.csprojResolveAssemblyReference.cache
+C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\SetElasticsearchSettings\bin\Release\YamlUtility.dll
+C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\SetElasticsearchSettings\bin\Release\YamlUtility.pdb

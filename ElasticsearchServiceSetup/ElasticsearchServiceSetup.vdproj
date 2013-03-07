@@ -33,6 +33,18 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_E3AAE7CFDDA24E7616E9B5736ABD24AE"
+        "OwnerKey" = "8:_248FBE86DBA14D6D84968488488DEAF2"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_E3AAE7CFDDA24E7616E9B5736ABD24AE"
+        "OwnerKey" = "8:_7E5FA437662740C2AB67939FB926CF5D"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_BCD078B605BC4CF29F58F4B4DA1229B4"
         "MsmSig" = "8:_UNDEFINED"
@@ -47,6 +59,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_248FBE86DBA14D6D84968488488DEAF2"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_E3AAE7CFDDA24E7616E9B5736ABD24AE"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -266,6 +284,37 @@
         }
         "File"
         {
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_E3AAE7CFDDA24E7616E9B5736ABD24AE"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:YamlUtility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_E3AAE7CFDDA24E7616E9B5736ABD24AE"
+                    {
+                    "Name" = "8:YamlUtility.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:YamlUtility.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_53CE6F8B139040F1B6264B36202DDE59"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
         }
         "FileType"
         {
@@ -334,7 +383,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:ElasticsearchServiceSetup"
         "ProductCode" = "8:{E54C80B1-424D-4492-93B5-CBD9DC62BEEE}"
-        "PackageCode" = "8:{5A738537-1AB3-448F-AB4B-895F606DE8A6}"
+        "PackageCode" = "8:{F4DE7A6D-577A-4194-B7F4-4A315C06616C}"
         "UpgradeCode" = "8:{9A0CF0E5-9805-460C-AF8F-D5DDB98716A5}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -855,7 +904,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_248FBE86DBA14D6D84968488488DEAF2"
             {
-            "SourcePath" = "8:..\\SetElasticsearchSettings\\obj\\x86\\Debug\\SetElasticsearchSettings.exe"
+            "SourcePath" = "8:..\\SetElasticsearchSettings\\obj\\x86\\Release\\SetElasticsearchSettings.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_3D49A2A67DC94E09A5C28C442CF63668"
@@ -883,7 +932,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_7E5FA437662740C2AB67939FB926CF5D"
             {
-            "SourcePath" = "8:..\\SetElasticsearchSettings\\obj\\x86\\Debug\\SetElasticsearchSettings.exe"
+            "SourcePath" = "8:..\\SetElasticsearchSettings\\obj\\x86\\Release\\SetElasticsearchSettings.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_53CE6F8B139040F1B6264B36202DDE59"
@@ -911,7 +960,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_BCD078B605BC4CF29F58F4B4DA1229B4"
             {
-            "SourcePath" = "8:..\\ElasticSearchService\\obj\\x86\\Debug\\ElasticSearchService.exe"
+            "SourcePath" = "8:..\\ElasticSearchService\\obj\\x86\\Release\\ElasticSearchService.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_53CE6F8B139040F1B6264B36202DDE59"

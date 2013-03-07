@@ -1,0 +1,4 @@
+C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\YamlUtility\bin\Release\YamlUtility.dll
+C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\YamlUtility\bin\Release\YamlUtility.pdb
+C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\YamlUtility\obj\Release\YamlUtility.dll
+C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\YamlUtility\obj\Release\YamlUtility.pdb

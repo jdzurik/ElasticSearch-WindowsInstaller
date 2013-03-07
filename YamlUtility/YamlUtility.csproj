@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{12CF7CE2-BCEE-46FF-A7E5-3A315AEF94AD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YamlUtility</RootNamespace>
+    <AssemblyName>YamlUtility</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Pair.cs" />
+    <Compile Include="Custom\BlockScalarModifier.cs" />
+    <Compile Include="Custom\ChompingMethod.cs" />
+    <Compile Include="Custom\MappingEntry.cs" />
+    <Compile Include="Custom\Scalar.cs" />
+    <Compile Include="Custom\YamlDocument.cs" />
+    <Compile Include="ParserCustom.cs" />
+    <Compile Include="ParserInput.cs" />
+    <Compile Include="Syntax\BlockScalarModifier.cs" />
+    <Compile Include="Syntax\DataItem.cs" />
+    <Compile Include="Syntax\Directive.cs" />
+    <Compile Include="Syntax\GlobalTagPrefix.cs" />
+    <Compile Include="Syntax\LocalTagPrefix.cs" />
+    <Compile Include="Syntax\Mapping.cs" />
+    <Compile Include="Syntax\MappingEntry.cs" />
+    <Compile Include="Syntax\NamedTagHandle.cs" />
+    <Compile Include="Syntax\NodeProperty.cs" />
+    <Compile Include="Syntax\NonSpecificTag.cs" />
+    <Compile Include="Syntax\PrimaryTagHandle.cs" />
+    <Compile Include="Syntax\ReservedDirective.cs" />
+    <Compile Include="Syntax\Scalar.cs" />
+    <Compile Include="Syntax\SecondaryTagHandle.cs" />
+    <Compile Include="Syntax\Sequence.cs" />
+    <Compile Include="Syntax\ShorthandTag.cs" />
+    <Compile Include="Syntax\Tag.cs" />
+    <Compile Include="Syntax\TagDirective.cs" />
+    <Compile Include="Syntax\TagHandle.cs" />
+    <Compile Include="Syntax\TagPrefix.cs" />
+    <Compile Include="Syntax\VerbatimTag.cs" />
+    <Compile Include="Syntax\YamlDirective.cs" />
+    <Compile Include="Syntax\YamlDocument.cs" />
+    <Compile Include="Syntax\YamlStream.cs" />
+    <Compile Include="Syntax\YamlVersion.cs" />
+    <Compile Include="TextInput.cs" />
+    <Compile Include="TextParserCommon.cs" />
+    <Compile Include="YamlParser.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
