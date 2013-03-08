@@ -5,4 +5,3 @@ C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\ElasticSearchService\obj\x8
 C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\ElasticSearchService\obj\x86\Release\ElasticSearchService.csproj.GenerateResource.Cache
 C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\ElasticSearchService\obj\x86\Release\ElasticSearchService.exe
 C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\ElasticSearchService\obj\x86\Release\ElasticSearchService.pdb
-C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\ElasticSearchService\obj\x86\Release\ElasticSearchService.csprojResolveAssemblyReference.cache

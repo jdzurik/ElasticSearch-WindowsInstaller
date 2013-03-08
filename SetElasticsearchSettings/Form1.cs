@@ -134,41 +134,41 @@ namespace SetElasticsearchSettings
 							 fwPolicy2.Rules.Remove("Elasticsearch Transport");
 
 							 //Discovery
-							 CreateRule("Elasticsearch Discovery",
+							 CreateRuleIn("Elasticsearch Discovery",
 									"Elasticsearch Discovery of other nodes",
 									NET_FW_IP_PROTOCOL_.NET_FW_IP_PROTOCOL_UDP,
 									"54328",
 									NET_FW_RULE_DIRECTION_.NET_FW_RULE_DIR_IN,
 									fwPolicy2);
-							 CreateRule("Elasticsearch Discovery",
-									"Elasticsearch Discovery of other nodes",
-									NET_FW_IP_PROTOCOL_.NET_FW_IP_PROTOCOL_UDP,
-									"54328",
-									NET_FW_RULE_DIRECTION_.NET_FW_RULE_DIR_OUT,
-									fwPolicy2);
-
 							 //Admin
-							 CreateRule("Elasticsearch HTTP",
+							 CreateRuleIn("Elasticsearch HTTP",
 									"Elasticsearch HTTP traffic",
 									NET_FW_IP_PROTOCOL_.NET_FW_IP_PROTOCOL_TCP,
 									"9200-9299",
 									NET_FW_RULE_DIRECTION_.NET_FW_RULE_DIR_IN,
 									fwPolicy2);
-							 CreateRule("Elasticsearch HTTP",
-									"Elasticsearch HTTP traffic",
-									NET_FW_IP_PROTOCOL_.NET_FW_IP_PROTOCOL_TCP,
-									"9200-9299",
-									NET_FW_RULE_DIRECTION_.NET_FW_RULE_DIR_OUT,
-									fwPolicy2);
-
 							 //Data
-							 CreateRule("Elasticsearch Transport",
+							 CreateRuleIn("Elasticsearch Transport",
 									"Elasticsearch Data Transport node-to-node",
 									NET_FW_IP_PROTOCOL_.NET_FW_IP_PROTOCOL_TCP,
 									"9300-9400",
 									NET_FW_RULE_DIRECTION_.NET_FW_RULE_DIR_IN,
 									fwPolicy2);
-							 CreateRule("Elasticsearch Transport",
+
+							 // outbound rules
+							 CreateRuleOut("Elasticsearch HTTP",
+									"Elasticsearch HTTP traffic",
+									NET_FW_IP_PROTOCOL_.NET_FW_IP_PROTOCOL_TCP,
+									"9200-9299",
+									NET_FW_RULE_DIRECTION_.NET_FW_RULE_DIR_OUT,
+									fwPolicy2);
+							 CreateRuleOut("Elasticsearch Discovery",
+								 "Elasticsearch Discovery of other nodes",
+								 NET_FW_IP_PROTOCOL_.NET_FW_IP_PROTOCOL_UDP,
+								 "54328",
+								 NET_FW_RULE_DIRECTION_.NET_FW_RULE_DIR_OUT,
+								 fwPolicy2);
+							 CreateRuleOut("Elasticsearch Transport",
 									"Elasticsearch Data Transport node-to-node",
 									NET_FW_IP_PROTOCOL_.NET_FW_IP_PROTOCOL_TCP,
 									"9300-9400",
@@ -187,7 +187,27 @@ namespace SetElasticsearchSettings
 
 			}
 
-			private void CreateRule(String RuleName, String Desc, NET_FW_IP_PROTOCOL_ Protocol, String RemotePorts, NET_FW_RULE_DIRECTION_ Direction, INetFwPolicy2 fwPolicy2)
+			private void CreateRuleIn(String RuleName, String Desc, NET_FW_IP_PROTOCOL_ Protocol, String RemotePorts, NET_FW_RULE_DIRECTION_ Direction, INetFwPolicy2 fwPolicy2)
+			{
+
+				 Type typeFWRule = Type.GetTypeFromProgID("HNetCfg.FwRule", false);
+				 INetFwRule newRule = (INetFwRule)Activator.CreateInstance(typeFWRule);
+				 newRule.Name = RuleName;
+				 newRule.Description = Desc;
+				 newRule.Protocol = (int)Protocol;
+				 newRule.LocalPorts = RemotePorts;
+				 newRule.RemoteAddresses = txtRemoteAddress.Text.Replace(" ", "").Replace("\r\n", ",");
+				 newRule.Direction = Direction;
+				 newRule.Enabled = true;
+				 newRule.Grouping = "Elasticsearch";
+				 //newRule.Profiles = fwPolicy2.CurrentProfileTypes;
+				 newRule.Action = NET_FW_ACTION_.NET_FW_ACTION_ALLOW;
+				 fwPolicy2.Rules.Add(newRule);
+
+
+			}
+
+			private void CreateRuleOut(String RuleName, String Desc, NET_FW_IP_PROTOCOL_ Protocol, String RemotePorts, NET_FW_RULE_DIRECTION_ Direction, INetFwPolicy2 fwPolicy2)
 			{
 
 				 Type typeFWRule = Type.GetTypeFromProgID("HNetCfg.FwRule", false);
@@ -200,7 +220,7 @@ namespace SetElasticsearchSettings
 				 newRule.Direction = Direction;
 				 newRule.Enabled = true;
 				 newRule.Grouping = "Elasticsearch";
-				 newRule.Profiles = fwPolicy2.CurrentProfileTypes;
+				 //newRule.Profiles = fwPolicy2.CurrentProfileTypes;
 				 newRule.Action = NET_FW_ACTION_.NET_FW_ACTION_ALLOW;
 				 fwPolicy2.Rules.Add(newRule);
 

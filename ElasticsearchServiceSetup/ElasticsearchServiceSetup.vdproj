@@ -15,12 +15,6 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_248FBE86DBA14D6D84968488488DEAF2"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_7E5FA437662740C2AB67939FB926CF5D"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -29,12 +23,6 @@
         {
         "MsmKey" = "8:_BCD078B605BC4CF29F58F4B4DA1229B4"
         "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_E3AAE7CFDDA24E7616E9B5736ABD24AE"
-        "OwnerKey" = "8:_248FBE86DBA14D6D84968488488DEAF2"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -53,12 +41,6 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_7E5FA437662740C2AB67939FB926CF5D"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_248FBE86DBA14D6D84968488488DEAF2"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -383,7 +365,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:ElasticsearchServiceSetup"
         "ProductCode" = "8:{E54C80B1-424D-4492-93B5-CBD9DC62BEEE}"
-        "PackageCode" = "8:{F4DE7A6D-577A-4194-B7F4-4A315C06616C}"
+        "PackageCode" = "8:{6AD4C78A-974C-4FED-8F36-4C0D214667B0}"
         "UpgradeCode" = "8:{9A0CF0E5-9805-460C-AF8F-D5DDB98716A5}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -503,6 +485,34 @@
         }
         "Shortcut"
         {
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_7F6CCD7296BF4B94883681BE9A4F7AB1"
+            {
+            "Name" = "8:Setup Elasticsearch Node"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_7E5FA437662740C2AB67939FB926CF5D"
+            "Folder" = "8:_3D49A2A67DC94E09A5C28C442CF63668"
+            "WorkingFolder" = "8:_53CE6F8B139040F1B6264B36202DDE59"
+            "Icon" = "8:"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_D9267EC3504740DFBCA60A372DDA5F30"
+            {
+            "Name" = "8:Setup Elasticsearch Node"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_7E5FA437662740C2AB67939FB926CF5D"
+            "Folder" = "8:_5E1A065279B84A008AA6AB1C01023352"
+            "WorkingFolder" = "8:_53CE6F8B139040F1B6264B36202DDE59"
+            "Icon" = "8:"
+            "Feature" = "8:"
+            }
         }
         "UserInterface"
         {
@@ -902,34 +912,6 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_248FBE86DBA14D6D84968488488DEAF2"
-            {
-            "SourcePath" = "8:..\\SetElasticsearchSettings\\obj\\x86\\Release\\SetElasticsearchSettings.exe"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_3D49A2A67DC94E09A5C28C442CF63668"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            "ProjectOutputGroupRegister" = "3:1"
-            "OutputConfiguration" = "8:"
-            "OutputGroupCanonicalName" = "8:Built"
-            "OutputProjectGuid" = "8:{84FF116E-F62A-47E4-9198-BAADF90CB384}"
-            "ShowKeyOutput" = "11:TRUE"
-                "ExcludeFilters"
-                {
-                }
-            }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_7E5FA437662740C2AB67939FB926CF5D"
             {
             "SourcePath" = "8:..\\SetElasticsearchSettings\\obj\\x86\\Release\\SetElasticsearchSettings.exe"
