@@ -37,7 +37,6 @@
 				 this.txtMaxMem = new System.Windows.Forms.TextBox();
 				 this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
 				 this.txtMinMem = new System.Windows.Forms.TextBox();
-				 this.lblSaved = new System.Windows.Forms.Label();
 				 this.btnSetJava = new System.Windows.Forms.Button();
 				 this.label1 = new System.Windows.Forms.Label();
 				 this.txtJavaHome = new System.Windows.Forms.TextBox();
@@ -110,7 +109,6 @@
 				 this.tableLayoutPanel1.Controls.Add(this.btnSave, 2, 4);
 				 this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 3);
 				 this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 1, 2);
-				 this.tableLayoutPanel1.Controls.Add(this.lblSaved, 2, 5);
 				 this.tableLayoutPanel1.Controls.Add(this.btnSetJava, 2, 1);
 				 this.tableLayoutPanel1.Controls.Add(this.label1, 0, 1);
 				 this.tableLayoutPanel1.Controls.Add(this.txtJavaHome, 1, 1);
@@ -200,15 +198,6 @@
 				 this.txtMinMem.Size = new System.Drawing.Size(47, 20);
 				 this.txtMinMem.TabIndex = 5;
 				 this.txtMinMem.Text = "256m";
-				 // 
-				 // lblSaved
-				 // 
-				 this.lblSaved.AutoSize = true;
-				 this.lblSaved.Location = new System.Drawing.Point(523, 156);
-				 this.lblSaved.Name = "lblSaved";
-				 this.lblSaved.Size = new System.Drawing.Size(50, 13);
-				 this.lblSaved.TabIndex = 12;
-				 this.lblSaved.Text = "Unsaved";
 				 // 
 				 // btnSetJava
 				 // 
@@ -327,7 +316,7 @@
 				 this.tabSettings.Padding = new System.Windows.Forms.Padding(3);
 				 this.tabSettings.Size = new System.Drawing.Size(664, 454);
 				 this.tabSettings.TabIndex = 0;
-				 this.tabSettings.Text = "Server Settings";
+				 this.tabSettings.Text = "Settings";
 				 this.tabSettings.UseVisualStyleBackColor = true;
 				 // 
 				 // tabConfig
@@ -337,7 +326,7 @@
 				 this.tabConfig.Name = "tabConfig";
 				 this.tabConfig.Size = new System.Drawing.Size(664, 454);
 				 this.tabConfig.TabIndex = 4;
-				 this.tabConfig.Text = "Config Settings";
+				 this.tabConfig.Text = "Config";
 				 this.tabConfig.UseVisualStyleBackColor = true;
 				 // 
 				 // tableLayoutPanel6
@@ -443,7 +432,7 @@
 				 this.tabYaml.Padding = new System.Windows.Forms.Padding(3);
 				 this.tabYaml.Size = new System.Drawing.Size(650, 346);
 				 this.tabYaml.TabIndex = 0;
-				 this.tabYaml.Text = "Yaml";
+				 this.tabYaml.Text = "Yaml Check";
 				 this.tabYaml.UseVisualStyleBackColor = true;
 				 // 
 				 // tviYaml
@@ -646,7 +635,7 @@
 				 this.Controls.Add(this.tabControl1);
 				 this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 				 this.Name = "Form1";
-				 this.Text = "ElasticSearch Settings";
+				 this.Text = "Elasticsearch Settings";
 				 this.tableLayoutPanel1.ResumeLayout(false);
 				 this.tableLayoutPanel1.PerformLayout();
 				 this.tableLayoutPanel2.ResumeLayout(false);
@@ -694,8 +683,7 @@
     private System.Windows.Forms.Button btnSetEsHome;
     private System.Windows.Forms.Button btnSave;
     private System.Windows.Forms.Button btnStartService;
-    private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
-    private System.Windows.Forms.Label lblSaved;
+		private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
     private System.Windows.Forms.Button btnStopService;
     private System.Windows.Forms.TextBox txtOutput;
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;

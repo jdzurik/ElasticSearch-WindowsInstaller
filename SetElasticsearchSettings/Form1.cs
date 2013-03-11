@@ -59,7 +59,6 @@ namespace SetElasticsearchSettings
 
 			private void btnSave_Click(object sender, EventArgs e)
 			{
-				 lblSaved.Text = "Loading ...";
 				 try
 				 {
 						DirectoryInfo di = new DirectoryInfo(txtESHome.Text + "\\logs");
