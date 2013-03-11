@@ -11,9 +11,9 @@ Prerequisite:
 Java
 
 Install process
-1.  Extract ElasticSearch into a directory on your system. 
-2.  Take the ElasticsearchServiceSetup.msi from the output install it.
-3.  Start > All Programs > Elasticsearch Setup > SetElasticsearchSettings.exe (Shift + Right click and run as administrator … Note this is important for it to work)
+1.  Download http://www.elasticsearch.org/download/ and Extract ElasticSearch into a directory on your system. 
+2.  Take the ESWindowsInstaller/ElasticsearchServiceSetup/Release/ElasticsearchServiceSetup.msi from the output install it.
+3.  Start > All Programs > Elasticsearch Setup > Setup Elasticsearch Node (Shift + Right click and run as administrator … Note this is important for it to work)
 
 From there you can: 
 
