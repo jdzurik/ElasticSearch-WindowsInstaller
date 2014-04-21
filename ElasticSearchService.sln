@@ -1,15 +1,19 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElasticSearchService", "ElasticSearchService\ElasticSearchService.csproj", "{DED6E6CE-BD98-4B1A-873C-8EC73EE40F5B}"
-EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ElasticsearchServiceSetup", "ElasticsearchServiceSetup\ElasticsearchServiceSetup.vdproj", "{A631A52A-77B1-4B8D-8828-0B0A122AB94A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestStartCode", "ConsoleApplication1\TestStartCode.csproj", "{4E1EBC0D-4CFC-46EB-9BB4-8AC3BF24C036}"
-EndProject
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30324.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SetElasticsearchSettings", "SetElasticsearchSettings\SetElasticsearchSettings.csproj", "{84FF116E-F62A-47E4-9198-BAADF90CB384}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YamlUtility", "YamlUtility\YamlUtility.csproj", "{12CF7CE2-BCEE-46FF-A7E5-3A315AEF94AD}"
+EndProject
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "SetupInstall", "SetupInstall\SetupInstall.wixproj", "{2E3D53FB-3E99-4379-80E9-6FDFD043634D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ref", "Ref", "{0B346040-260E-47F4-BD80-E1E01B32D06A}"
+	ProjectSection(SolutionItems) = preProject
+		Ref\WixUIExtension.dll = Ref\WixUIExtension.dll
+		Ref\WixUtilExtension.dll = Ref\WixUtilExtension.dll
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
@@ -25,36 +29,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DED6E6CE-BD98-4B1A-873C-8EC73EE40F5B}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{DED6E6CE-BD98-4B1A-873C-8EC73EE40F5B}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{DED6E6CE-BD98-4B1A-873C-8EC73EE40F5B}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{DED6E6CE-BD98-4B1A-873C-8EC73EE40F5B}.Debug|x86.ActiveCfg = Debug|x86
-		{DED6E6CE-BD98-4B1A-873C-8EC73EE40F5B}.Debug|x86.Build.0 = Debug|x86
-		{DED6E6CE-BD98-4B1A-873C-8EC73EE40F5B}.Release|Any CPU.ActiveCfg = Release|x86
-		{DED6E6CE-BD98-4B1A-873C-8EC73EE40F5B}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{DED6E6CE-BD98-4B1A-873C-8EC73EE40F5B}.Release|Mixed Platforms.Build.0 = Release|x86
-		{DED6E6CE-BD98-4B1A-873C-8EC73EE40F5B}.Release|x86.ActiveCfg = Release|x86
-		{DED6E6CE-BD98-4B1A-873C-8EC73EE40F5B}.Release|x86.Build.0 = Release|x86
-		{A631A52A-77B1-4B8D-8828-0B0A122AB94A}.Debug|Any CPU.ActiveCfg = Debug
-		{A631A52A-77B1-4B8D-8828-0B0A122AB94A}.Debug|Any CPU.Build.0 = Debug
-		{A631A52A-77B1-4B8D-8828-0B0A122AB94A}.Debug|Mixed Platforms.ActiveCfg = Debug
-		{A631A52A-77B1-4B8D-8828-0B0A122AB94A}.Debug|Mixed Platforms.Build.0 = Debug
-		{A631A52A-77B1-4B8D-8828-0B0A122AB94A}.Debug|x86.ActiveCfg = Debug
-		{A631A52A-77B1-4B8D-8828-0B0A122AB94A}.Release|Any CPU.ActiveCfg = Release
-		{A631A52A-77B1-4B8D-8828-0B0A122AB94A}.Release|Any CPU.Build.0 = Release
-		{A631A52A-77B1-4B8D-8828-0B0A122AB94A}.Release|Mixed Platforms.ActiveCfg = Release
-		{A631A52A-77B1-4B8D-8828-0B0A122AB94A}.Release|Mixed Platforms.Build.0 = Release
-		{A631A52A-77B1-4B8D-8828-0B0A122AB94A}.Release|x86.ActiveCfg = Release
-		{4E1EBC0D-4CFC-46EB-9BB4-8AC3BF24C036}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{4E1EBC0D-4CFC-46EB-9BB4-8AC3BF24C036}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{4E1EBC0D-4CFC-46EB-9BB4-8AC3BF24C036}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{4E1EBC0D-4CFC-46EB-9BB4-8AC3BF24C036}.Debug|x86.ActiveCfg = Debug|x86
-		{4E1EBC0D-4CFC-46EB-9BB4-8AC3BF24C036}.Debug|x86.Build.0 = Debug|x86
-		{4E1EBC0D-4CFC-46EB-9BB4-8AC3BF24C036}.Release|Any CPU.ActiveCfg = Release|x86
-		{4E1EBC0D-4CFC-46EB-9BB4-8AC3BF24C036}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{4E1EBC0D-4CFC-46EB-9BB4-8AC3BF24C036}.Release|Mixed Platforms.Build.0 = Release|x86
-		{4E1EBC0D-4CFC-46EB-9BB4-8AC3BF24C036}.Release|x86.ActiveCfg = Release|x86
-		{4E1EBC0D-4CFC-46EB-9BB4-8AC3BF24C036}.Release|x86.Build.0 = Release|x86
 		{84FF116E-F62A-47E4-9198-BAADF90CB384}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{84FF116E-F62A-47E4-9198-BAADF90CB384}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
 		{84FF116E-F62A-47E4-9198-BAADF90CB384}.Debug|Mixed Platforms.Build.0 = Debug|x86
@@ -75,6 +49,16 @@ Global
 		{12CF7CE2-BCEE-46FF-A7E5-3A315AEF94AD}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{12CF7CE2-BCEE-46FF-A7E5-3A315AEF94AD}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{12CF7CE2-BCEE-46FF-A7E5-3A315AEF94AD}.Release|x86.ActiveCfg = Release|Any CPU
+		{2E3D53FB-3E99-4379-80E9-6FDFD043634D}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{2E3D53FB-3E99-4379-80E9-6FDFD043634D}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{2E3D53FB-3E99-4379-80E9-6FDFD043634D}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{2E3D53FB-3E99-4379-80E9-6FDFD043634D}.Debug|x86.ActiveCfg = Debug|x86
+		{2E3D53FB-3E99-4379-80E9-6FDFD043634D}.Debug|x86.Build.0 = Debug|x86
+		{2E3D53FB-3E99-4379-80E9-6FDFD043634D}.Release|Any CPU.ActiveCfg = Release|x86
+		{2E3D53FB-3E99-4379-80E9-6FDFD043634D}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{2E3D53FB-3E99-4379-80E9-6FDFD043634D}.Release|Mixed Platforms.Build.0 = Release|x86
+		{2E3D53FB-3E99-4379-80E9-6FDFD043634D}.Release|x86.ActiveCfg = Release|x86
+		{2E3D53FB-3E99-4379-80E9-6FDFD043634D}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

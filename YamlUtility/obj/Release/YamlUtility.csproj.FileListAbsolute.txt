@@ -2,3 +2,8 @@ C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\YamlUtility\bin\Release\Yam
 C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\YamlUtility\bin\Release\YamlUtility.pdb
 C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\YamlUtility\obj\Release\YamlUtility.dll
 C:\Users\dzurikj\Documents\GitHub\ESWindowsInstaller\YamlUtility\obj\Release\YamlUtility.pdb
+D:\Dev\ESWindowsInstaller\YamlUtility\bin\Release\YamlUtility.dll
+D:\Dev\ESWindowsInstaller\YamlUtility\bin\Release\YamlUtility.pdb
+D:\Dev\ESWindowsInstaller\YamlUtility\obj\Release\YamlUtility.dll
+D:\Dev\ESWindowsInstaller\YamlUtility\obj\Release\YamlUtility.pdb
+D:\Dev\ESWindowsInstaller\YamlUtility\obj\Release\YamlUtility.csprojResolveAssemblyReference.cache

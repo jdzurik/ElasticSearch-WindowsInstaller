@@ -20,23 +20,20 @@ namespace SetElasticsearchSettings
 	 public partial class Form1 : Form
 	 {
 			private string ESClustername = "elasticsearch";
+            private string ESHome = "";
 			public Form1()
 			{
 				 InitializeComponent();
 				 txtJavaHome.Text = Environment.GetEnvironmentVariable("JAVA_HOME", EnvironmentVariableTarget.Machine);
-				 txtESHome.Text = Environment.GetEnvironmentVariable("ES_HOME", EnvironmentVariableTarget.Machine);
+                 ESHome = Environment.GetEnvironmentVariable("ES_HOME", EnvironmentVariableTarget.Machine);
+                 txtESHome.Text = ESHome;
 
 				 txtMinMem.Text = Environment.GetEnvironmentVariable("ES_MIN_MEM", EnvironmentVariableTarget.Machine);
 				 txtMaxMem.Text = Environment.GetEnvironmentVariable("ES_MAX_MEM", EnvironmentVariableTarget.Machine);
 				 if (txtESHome.Text != "")
 				 {
-						fswLogFile.Path = txtESHome.Text + "\\logs\\";
-						fswLogFile.NotifyFilter = NotifyFilters.LastWrite;
-						fswLogFile.Filter = "elasticsearch.log";
-
 						loadConfig();
 				 }
-				 fswLogFile.EnableRaisingEvents = false;
 			}
 
 			private void btnSetJava_Click(object sender, EventArgs e)
@@ -61,9 +58,7 @@ namespace SetElasticsearchSettings
 			{
 				 try
 				 {
-						DirectoryInfo di = new DirectoryInfo(txtESHome.Text + "\\logs");
-						if (!di.Exists)
-							 di.Create();
+
 
 						DirectoryInfo esdi = new DirectoryInfo(txtESHome.Text);
 						DirectorySecurity myDirectorySecurity = esdi.GetAccessControl();
@@ -89,34 +84,12 @@ namespace SetElasticsearchSettings
 
 			private void btnStartService_Click(object sender, EventArgs e)
 			{
-
-
-				 using (Process proc = new Process())
-				 {
-						proc.StartInfo.FileName = "sc";
-						proc.StartInfo.UseShellExecute = false;
-						proc.StartInfo.RedirectStandardOutput = true;
-						proc.StartInfo.Arguments = string.Format(" start ElasticSearchService");
-						proc.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-						proc.Start();
-						txtOutput.Text += "\n" + proc.StandardOutput.ReadToEnd() + DateTime.Now.ToString() + "\n\n";
-						proc.WaitForExit();
-				 }
+                RunServiceBat("start");
 			}
 
 			private void btnStopService_Click(object sender, EventArgs e)
 			{
-				 using (Process proc = new Process())
-				 {
-						proc.StartInfo.FileName = "sc";
-						proc.StartInfo.UseShellExecute = false;
-						proc.StartInfo.RedirectStandardOutput = true;
-						proc.StartInfo.Arguments = string.Format(" stop ElasticSearchService");
-						proc.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-						proc.Start();
-						txtOutput.Text += "\n" + proc.StandardOutput.ReadToEnd() + DateTime.Now.ToString() + "\n\n";
-						proc.WaitForExit();
-				 }
+                RunServiceBat("stop");
 			}
 
 			private void btnOpenPorts_Click(object sender, EventArgs e)
@@ -264,74 +237,7 @@ namespace SetElasticsearchSettings
 				 }
 			}
 
-			private void fswLogFile_Changed(object sender, FileSystemEventArgs e)
-			{
-				 LoadLog();
-				 lblLastUpdatedLog.Text = "Last Updated: " + DateTime.Now.ToShortTimeString();
-			}
-
-			private void btnLogMonitor_Click(object sender, EventArgs e)
-			{
-				 if (fswLogFile.EnableRaisingEvents)
-				 {
-						btnLogMonitor.Text = "Start Monitoring Log";
-						fswLogFile.EnableRaisingEvents = false;
-				 }
-				 else
-				 {
-						LoadLog();
-						btnLogMonitor.Text = "Stop Monitoring Log";
-						fswLogFile.EnableRaisingEvents = true;
-				 }
-			}
-
-			private void LoadLog()
-			{
-
-				 string logPath = txtESHome.Text + "\\logs\\" + ESClustername + ".log";
-				 try
-				 {
-						
-						///todo: resolve FileInfo conflict
-						FileInfo fi = new FileInfo(logPath);
-						if (fi.Length > 10000000)
-						{
-							 DialogResult dr = MessageBox.Show("This file is very large and may take a while \nto load are you sure you want to continue monitoring it?", "Confirm file Load", MessageBoxButtons.YesNo);
-							 if (dr == System.Windows.Forms.DialogResult.Yes)
-							 {
-									using (StreamReader sr = new StreamReader(logPath))
-									{
-										 String line = sr.ReadToEnd();
-										 txtLogging.Text = line.Replace("\n", "\r\n");
-									}
-							 }
-							 else
-							 {
-									btnLogMonitor.Text = "Start Monitoring Log";
-									fswLogFile.EnableRaisingEvents = false;
-							 }
-						}
-						else
-						{
-
-							 using (FileStream stream = File.Open(logPath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
-							 {
-									using (StreamReader sr = new StreamReader(logPath))
-									{
-										 String line = sr.ReadToEnd();
-										 txtLogging.Text = line.Replace("\n", "\r\n");
-									}
-							 }
-
-						}
-
-				 }
-				 catch (Exception ex)
-				 {
-						MessageBox.Show("The file [" + logPath + "] could not be read \nYou may need to stop the service to view the log:\n" + ex.Message);
-				 }
-			}
-
+			
 			private void LoadYaml()
 			{
 
@@ -364,5 +270,45 @@ namespace SetElasticsearchSettings
 				 }
 			}
 
+            private void btnInstall_Click(object sender, EventArgs e)
+            {
+                RunServiceBat("install");
+            }
+
+            private void btnUninstall_Click(object sender, EventArgs e)
+            {
+                RunServiceBat("remove");
+            }
+
+            private void btnManager_Click(object sender, EventArgs e)
+            {
+                RunServiceBat("manager");
+            }
+
+            private void RunServiceBat(string action) {
+                if (ESHome != "")
+                {
+
+                    using (Process proc = new Process())
+                    {
+                        proc.StartInfo.FileName = ESHome + @"\bin\service.bat";
+                        proc.StartInfo.UseShellExecute = false;
+                        proc.StartInfo.RedirectStandardOutput = true;
+                        proc.StartInfo.Arguments = string.Format(" " + action);
+                        proc.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                        proc.Start();
+                        txtOutput.Text = "\n" + proc.StandardOutput.ReadToEnd() + "\n\r\n\r" + DateTime.Now.ToString() + "\n\r\n\r";
+                        if (action == "start")
+                        {
+                            txtOutput.Text += "If this is the first time starting the service please use the Manage button to make sure it is set to automatic start up.";
+                        }
+                        proc.WaitForExit();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Could not " + action + " Service ES_HOME Variable is not set: \n");
+                }
+            }
 	 }
 }

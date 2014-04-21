@@ -1,25 +1,22 @@
-This is a windows service installer and basic settings tool for ElasticSearch on windows. 
+﻿Updated for ES v.1 to use service.bat
 
-This creates a windows installer program to install the windows service that uses the java command line that would normally be created by elasticsearch.bat
-
-When starting the service it runs the command line and sends the output to a log file. The installer will not automatically start the service. I recommend using the setup tool before you start the service.    
-
-The windows forms setup tool is for configuring environmental variables, creating log directories, setting permissions, opening firewall ports and starting/stopping the windows service. 
+The windows forms setup tool is for configuring environmental variables, creating log directories, setting permissions, opening firewall ports and Install|Starting|Stop|Uninstall|Manage the windows service via the .bat file that comes with the latest version. 
 
 Prerequisite:
 .net Framework 4
 Java
 
 Install process
-1.  Download http://www.elasticsearch.org/download/ and Extract ElasticSearch into a directory on your system. 
-2.  Take the ESWindowsInstaller/ElasticsearchServiceSetup/Release/ElasticsearchServiceSetup.msi from the output install it.
-3.  Start > All Programs > Elasticsearch Setup > Setup Elasticsearch Node (Shift + Right click and run as administrator … Note this is important for it to work)
+1.  Download the desired version from http://www.elasticsearch.org/ and Extract elasticsearch into a directory on your system. 
+2.  Take the SetupInstall\bin\Release\SetupInstall.msi from the output install it.
+3.  Start > All Programs > Elasticsearch Settings > Elasticsearch Settings (Shift + Right click and run as administrator … Note this is important for it to work)
 
 From there you can: 
 
-Settings tab:
+Settings tab: 
+*** The first thing to do is set the ES_HOME variable if not already set. Its required for the service tab to work.  
 Set your environment variables JAVA_HOME, ES_HOME, ES_MIN_MEM, ES_MAX_MEM  (These work for the .bat as well)
-Save your variables … This will create a directory under ES_HOME for the service log files and give permissions to “NETWORK SERVICE” (This is the same account used for the windows service you can changes this as needed) on ES_HOME. 
+Save your variables (You should get an alert when they save) … This will give permissions to “NETWORK SERVICE” on ES_HOME. 
 
 Config tab:
 Use the load config button to load the config and edit it. Under the Yaml tab you can check the settings in an abbreviated format.
@@ -28,9 +25,5 @@ Firewall tab:
 You can optionally open firewall ports 54328 UDP, and TCP HTTP 9200-9300 and Transport 9300-9400 from the “Open Firewall Ports” button. If you would like to lock down the ports to only specific remote ip addresses or subnets then enter the ip's in the box to the left.
 
 Service tab:
-From her you can start and stop the windows service. 
+From her you can Install|Starting|Stop|Uninstall|Manage the windows service from here. 
 
-Log tab:
-This uses the cluster.name you set in your config or defaults to Elasticsearch.log. You can only load it when the service is not running right now.
-
-There are things that I would have added like config file for the service so you can change the options without recompiling  but, "ain't nobody got time for that". Any way this should make it easier to set up and install ElasticSearch on a windows server or PC. Hope this helps someone.      

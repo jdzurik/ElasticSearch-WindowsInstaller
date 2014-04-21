@@ -1,5 +1,0 @@
-C:\SVN\ElasticSearchService\ConsoleApplication1\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\SVN\ElasticSearchService\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
-C:\SVN\ElasticSearchService\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
-C:\SVN\ElasticSearchService\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.exe
-C:\SVN\ElasticSearchService\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.pdb
