@@ -1,0 +1,4 @@
+D:\Dev\ESWindowsInstaller\YamlUtility\bin\Debug\YamlUtility.dll
+D:\Dev\ESWindowsInstaller\YamlUtility\bin\Debug\YamlUtility.pdb
+D:\Dev\ESWindowsInstaller\YamlUtility\obj\Debug\YamlUtility.dll
+D:\Dev\ESWindowsInstaller\YamlUtility\obj\Debug\YamlUtility.pdb

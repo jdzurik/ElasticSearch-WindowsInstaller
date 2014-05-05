@@ -96,7 +96,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.68354F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.31645F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 140F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 141F));
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.btnSave, 2, 4);
@@ -141,7 +141,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(520, 123);
+            this.btnSave.Location = new System.Drawing.Point(519, 123);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(114, 23);
             this.btnSave.TabIndex = 10;
@@ -160,7 +160,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(384, 24);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(383, 24);
             this.tableLayoutPanel2.TabIndex = 15;
             // 
             // txtMaxMem
@@ -194,7 +194,7 @@
             // 
             // btnSetJava
             // 
-            this.btnSetJava.Location = new System.Drawing.Point(520, 33);
+            this.btnSetJava.Location = new System.Drawing.Point(519, 33);
             this.btnSetJava.Name = "btnSetJava";
             this.btnSetJava.Size = new System.Drawing.Size(123, 23);
             this.btnSetJava.TabIndex = 8;
@@ -216,7 +216,7 @@
             this.txtJavaHome.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtJavaHome.Location = new System.Drawing.Point(130, 33);
             this.txtJavaHome.Name = "txtJavaHome";
-            this.txtJavaHome.Size = new System.Drawing.Size(384, 20);
+            this.txtJavaHome.Size = new System.Drawing.Size(383, 20);
             this.txtJavaHome.TabIndex = 6;
             // 
             // txtESHome
@@ -224,12 +224,12 @@
             this.txtESHome.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtESHome.Location = new System.Drawing.Point(130, 3);
             this.txtESHome.Name = "txtESHome";
-            this.txtESHome.Size = new System.Drawing.Size(384, 20);
+            this.txtESHome.Size = new System.Drawing.Size(383, 20);
             this.txtESHome.TabIndex = 7;
             // 
             // btnSetEsHome
             // 
-            this.btnSetEsHome.Location = new System.Drawing.Point(520, 3);
+            this.btnSetEsHome.Location = new System.Drawing.Point(519, 3);
             this.btnSetEsHome.Name = "btnSetEsHome";
             this.btnSetEsHome.Size = new System.Drawing.Size(123, 23);
             this.btnSetEsHome.TabIndex = 9;

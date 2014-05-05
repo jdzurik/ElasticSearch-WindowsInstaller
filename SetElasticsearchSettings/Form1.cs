@@ -116,14 +116,14 @@ namespace SetElasticsearchSettings
 							 CreateRuleIn("Elasticsearch HTTP",
 									"Elasticsearch HTTP traffic",
 									NET_FW_IP_PROTOCOL_.NET_FW_IP_PROTOCOL_TCP,
-									"9200-9299",
+                                    "9200,9201,9202,9203,9204,9205,9206,9207,9208,9209,9210,9211,9212,9213,9214",
 									NET_FW_RULE_DIRECTION_.NET_FW_RULE_DIR_IN,
 									fwPolicy2);
 							 //Data
 							 CreateRuleIn("Elasticsearch Transport",
 									"Elasticsearch Data Transport node-to-node",
 									NET_FW_IP_PROTOCOL_.NET_FW_IP_PROTOCOL_TCP,
-									"9300-9400",
+                                    "9300,9301,9302,9303,9304,9305,9306,9307,9308,9309,9310,9311,9312,9313,9314",
 									NET_FW_RULE_DIRECTION_.NET_FW_RULE_DIR_IN,
 									fwPolicy2);
 
@@ -131,7 +131,7 @@ namespace SetElasticsearchSettings
 							 CreateRuleOut("Elasticsearch HTTP",
 									"Elasticsearch HTTP traffic",
 									NET_FW_IP_PROTOCOL_.NET_FW_IP_PROTOCOL_TCP,
-									"9200-9299",
+                                    "9200,9201,9202,9203,9204,9205,9206,9207,9208,9209,9210,9211,9212,9213,9214",
 									NET_FW_RULE_DIRECTION_.NET_FW_RULE_DIR_OUT,
 									fwPolicy2);
 							 CreateRuleOut("Elasticsearch Discovery",
@@ -143,7 +143,7 @@ namespace SetElasticsearchSettings
 							 CreateRuleOut("Elasticsearch Transport",
 									"Elasticsearch Data Transport node-to-node",
 									NET_FW_IP_PROTOCOL_.NET_FW_IP_PROTOCOL_TCP,
-									"9300-9400",
+                                    "9300,9301,9302,9303,9304,9305,9306,9307,9308,9309,9310,9311,9312,9313,9314",
 									NET_FW_RULE_DIRECTION_.NET_FW_RULE_DIR_OUT,
 									fwPolicy2);
 
@@ -172,7 +172,8 @@ namespace SetElasticsearchSettings
 				 newRule.Direction = Direction;
 				 newRule.Enabled = true;
 				 newRule.Grouping = "Elasticsearch";
-				 //newRule.Profiles = fwPolicy2.CurrentProfileTypes;
+				 newRule.Profiles = fwPolicy2.CurrentProfileTypes;
+                 //newRule.Interfaces = "All";
 				 newRule.Action = NET_FW_ACTION_.NET_FW_ACTION_ALLOW;
 				 fwPolicy2.Rules.Add(newRule);
 

@@ -42,14 +42,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SetElasticsearchSettings.exe" size="181760">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SetElasticsearchSettings.exe" size="194560">
       <assemblyIdentity name="SetElasticsearchSettings" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>sfzEflriHZOv7zK7/bpTjpzrRAE=</dsig:DigestValue>
+        <dsig:DigestValue>FFGp7VyjRu89V9I/fmeOUCYbMws=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="YamlUtility.dll" size="75264">
+      <assemblyIdentity name="YamlUtility" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>Q4De5Xiuzu/IVytPq0eIW4ybnMc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

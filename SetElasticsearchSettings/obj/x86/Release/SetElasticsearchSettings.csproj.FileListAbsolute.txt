@@ -23,8 +23,6 @@ D:\Dev\ESWindowsInstaller\SetElasticsearchSettings\obj\x86\Release\Interop.NetFw
 D:\Dev\ESWindowsInstaller\SetElasticsearchSettings\obj\x86\Release\SetElasticsearchSettings.csproj.ResolveComReference.cache
 D:\Dev\ESWindowsInstaller\SetElasticsearchSettings\obj\x86\Release\SetElasticsearchSettings.exe
 D:\Dev\ESWindowsInstaller\SetElasticsearchSettings\obj\x86\Release\SetElasticsearchSettings.pdb
-D:\Dev\ESWindowsInstaller\SetElasticsearchSettings\bin\Release\SetElasticsearchSettings.exe.manifest
-D:\Dev\ESWindowsInstaller\SetElasticsearchSettings\bin\Release\SetElasticsearchSettings.application
 D:\Dev\ESWindowsInstaller\SetElasticsearchSettings\bin\Release\SetElasticsearchSettings.exe
 D:\Dev\ESWindowsInstaller\SetElasticsearchSettings\bin\Release\SetElasticsearchSettings.pdb
 D:\Dev\ESWindowsInstaller\SetElasticsearchSettings\bin\Release\YamlUtility.dll
@@ -33,6 +31,3 @@ D:\Dev\ESWindowsInstaller\SetElasticsearchSettings\obj\x86\Release\SetElasticsea
 D:\Dev\ESWindowsInstaller\SetElasticsearchSettings\obj\x86\Release\SetElasticsearchSettings.Form1.resources
 D:\Dev\ESWindowsInstaller\SetElasticsearchSettings\obj\x86\Release\SetElasticsearchSettings.Properties.Resources.resources
 D:\Dev\ESWindowsInstaller\SetElasticsearchSettings\obj\x86\Release\SetElasticsearchSettings.csproj.GenerateResource.Cache
-D:\Dev\ESWindowsInstaller\SetElasticsearchSettings\obj\x86\Release\SetElasticsearchSettings.TrustInfo.xml
-D:\Dev\ESWindowsInstaller\SetElasticsearchSettings\obj\x86\Release\SetElasticsearchSettings.exe.manifest
-D:\Dev\ESWindowsInstaller\SetElasticsearchSettings\obj\x86\Release\SetElasticsearchSettings.application

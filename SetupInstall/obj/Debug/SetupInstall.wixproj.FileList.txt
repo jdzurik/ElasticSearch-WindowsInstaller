@@ -1,0 +1,6 @@
+D:\Dev\ESWindowsInstaller\SetupInstall\bin\Debug\SetupInstall.msi
+D:\Dev\ESWindowsInstaller\SetupInstall\bin\Debug\SetupInstall.wixpdb
+obj\Debug\Product.wixobj
+obj\Debug\SetupInstall.wixproj.BindContentsFileListnull.txt
+obj\Debug\SetupInstall.wixproj.BindOutputsFileListnull.txt
+obj\Debug\SetupInstall.wixproj.BindBuiltOutputsFileListnull.txt
