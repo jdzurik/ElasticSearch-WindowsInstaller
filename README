@@ -25,5 +25,5 @@ Firewall tab:
 You can optionally open firewall ports 54328 UDP, and TCP HTTP 9200-9300 and Transport 9300-9400 from the “Open Firewall Ports” button. If you would like to lock down the ports to only specific remote ip addresses or subnets then enter the ip's in the box to the left.
 
 Service tab:
-From her you can Install|Starting|Stop|Uninstall|Manage the windows service from here. 
+From here you can Install|Starting|Stop|Uninstall|Manage the windows service. 
 
