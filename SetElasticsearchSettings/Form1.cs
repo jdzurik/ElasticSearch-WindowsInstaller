@@ -38,11 +38,11 @@ namespace SetElasticsearchSettings
                 if (!File.Exists(ESHome + ESConfigBase))
                 {
                     MessageBox.Show("Please select config location...");
-                    DialogResult dr = folderBrowserDialog1.ShowDialog();
+                    DialogResult dr = openFileDialog1.ShowDialog();
                     if (dr == DialogResult.OK)
                     {
 
-                        ESConfig = folderBrowserDialog1.SelectedPath;
+                        ESConfig = openFileDialog1.FileName;
                     }
 
                 }

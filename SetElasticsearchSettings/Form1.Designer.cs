@@ -74,6 +74,7 @@
             this.btnUninstall = new System.Windows.Forms.Button();
             this.fswLogFile = new System.IO.FileSystemWatcher();
             this.txtConfigLoc = new System.Windows.Forms.TextBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -290,7 +291,7 @@
             // 
             // folderBrowserDialog1
             // 
-            this.folderBrowserDialog1.RootFolder = System.Environment.SpecialFolder.Recent;
+            this.folderBrowserDialog1.RootFolder = System.Environment.SpecialFolder.MyComputer;
             // 
             // tabControl1
             // 
@@ -588,6 +589,11 @@
             this.txtConfigLoc.TabIndex = 4;
             this.txtConfigLoc.TextChanged += new System.EventHandler(this.txtConfigLoc_TextChanged);
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.DefaultExt = "yml";
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -671,6 +677,7 @@
         private System.Windows.Forms.Button btnUninstall;
         private System.Windows.Forms.TextBox txtConfigLoc;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
   }
 }
 
