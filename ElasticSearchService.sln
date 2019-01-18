@@ -1,16 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SetElasticsearchSettings", "SetElasticsearchSettings\SetElasticsearchSettings.csproj", "{84FF116E-F62A-47E4-9198-BAADF90CB384}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YamlUtility", "YamlUtility\YamlUtility.csproj", "{12CF7CE2-BCEE-46FF-A7E5-3A315AEF94AD}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ref", "Ref", "{0B346040-260E-47F4-BD80-E1E01B32D06A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ref", "Ref", "{71C23D3F-8217-43DA-88F9-FC0CC95E9E68}"
 	ProjectSection(SolutionItems) = preProject
-		Ref\WixUIExtension.dll = Ref\WixUIExtension.dll
-		Ref\WixUtilExtension.dll = Ref\WixUtilExtension.dll
+		.gitignore = .gitignore
 	EndProjectSection
 EndProject
 Global
@@ -46,6 +45,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8175F6E5-2C3C-4B1C-A144-C87319D5E980}
 	EndGlobalSection
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True

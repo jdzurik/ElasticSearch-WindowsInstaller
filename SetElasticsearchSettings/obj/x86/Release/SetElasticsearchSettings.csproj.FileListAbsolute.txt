@@ -41,7 +41,9 @@ C:\Dev\ElasticSearch-WindowsInstaller\SetElasticsearchSettings\bin\Release\SetEl
 C:\Dev\ElasticSearch-WindowsInstaller\SetElasticsearchSettings\bin\Release\SetElasticsearchSettings.pdb
 C:\Dev\ElasticSearch-WindowsInstaller\SetElasticsearchSettings\bin\Release\YamlUtility.dll
 C:\Dev\ElasticSearch-WindowsInstaller\SetElasticsearchSettings\bin\Release\YamlUtility.pdb
-C:\Dev\ElasticSearch-WindowsInstaller\SetElasticsearchSettings\obj\x86\Release\SetElasticsearchSettings.csprojResolveAssemblyReference.cache
 C:\Dev\ElasticSearch-WindowsInstaller\SetElasticsearchSettings\obj\x86\Release\SetElasticsearchSettings.Form1.resources
 C:\Dev\ElasticSearch-WindowsInstaller\SetElasticsearchSettings\obj\x86\Release\SetElasticsearchSettings.Properties.Resources.resources
 C:\Dev\ElasticSearch-WindowsInstaller\SetElasticsearchSettings\obj\x86\Release\SetElasticsearchSettings.csproj.GenerateResource.Cache
+C:\Dev\ElasticSearch-WindowsInstaller\SetElasticsearchSettings\obj\x86\Release\SetElasticsearchSettings.csprojAssemblyReference.cache
+C:\Dev\ElasticSearch-WindowsInstaller\SetElasticsearchSettings\obj\x86\Release\SetElasticsearchSettings.csproj.CoreCompileInputs.cache
+C:\Dev\ElasticSearch-WindowsInstaller\SetElasticsearchSettings\obj\x86\Release\SetElasticsearchSettings.csproj.CopyComplete
