@@ -2,3 +2,9 @@ D:\Dev\ESWindowsInstaller\YamlUtility\bin\Debug\YamlUtility.dll
 D:\Dev\ESWindowsInstaller\YamlUtility\bin\Debug\YamlUtility.pdb
 D:\Dev\ESWindowsInstaller\YamlUtility\obj\Debug\YamlUtility.dll
 D:\Dev\ESWindowsInstaller\YamlUtility\obj\Debug\YamlUtility.pdb
+C:\Dev\ElasticSearch-WindowsInstaller\YamlUtility\bin\Debug\YamlUtility.dll
+C:\Dev\ElasticSearch-WindowsInstaller\YamlUtility\bin\Debug\YamlUtility.pdb
+C:\Dev\ElasticSearch-WindowsInstaller\YamlUtility\obj\Debug\YamlUtility.csprojAssemblyReference.cache
+C:\Dev\ElasticSearch-WindowsInstaller\YamlUtility\obj\Debug\YamlUtility.csproj.CoreCompileInputs.cache
+C:\Dev\ElasticSearch-WindowsInstaller\YamlUtility\obj\Debug\YamlUtility.dll
+C:\Dev\ElasticSearch-WindowsInstaller\YamlUtility\obj\Debug\YamlUtility.pdb
