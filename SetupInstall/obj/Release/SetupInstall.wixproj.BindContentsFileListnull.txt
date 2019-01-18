@@ -1,2 +1,0 @@
-D:\Dev\ESWindowsInstaller\SetElasticsearchSettings\bin\Release\SetElasticsearchSettings.exe
-D:\Dev\ESWindowsInstaller\YamlUtility\bin\Release\YamlUtility.dll

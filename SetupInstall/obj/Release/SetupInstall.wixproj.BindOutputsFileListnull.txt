@@ -1,2 +1,0 @@
-D:\Dev\ESWindowsInstaller\SetupInstall\bin\Release\SetupInstall.msi
-D:\Dev\ESWindowsInstaller\SetupInstall\bin\Release\SetupInstall.wixpdb
