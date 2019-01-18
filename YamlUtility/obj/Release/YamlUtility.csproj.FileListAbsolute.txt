@@ -11,4 +11,3 @@ C:\Dev\ElasticSearch-WindowsInstaller\YamlUtility\bin\Release\YamlUtility.pdb
 C:\Dev\ElasticSearch-WindowsInstaller\YamlUtility\obj\Release\YamlUtility.dll
 C:\Dev\ElasticSearch-WindowsInstaller\YamlUtility\obj\Release\YamlUtility.pdb
 C:\Dev\ElasticSearch-WindowsInstaller\YamlUtility\obj\Release\YamlUtility.csproj.CoreCompileInputs.cache
-C:\Dev\ElasticSearch-WindowsInstaller\YamlUtility\obj\Release\YamlUtility.csprojAssemblyReference.cache
