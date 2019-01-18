@@ -73,6 +73,7 @@
             this.btnInstall = new System.Windows.Forms.Button();
             this.btnUninstall = new System.Windows.Forms.Button();
             this.fswLogFile = new System.IO.FileSystemWatcher();
+            this.txtConfigLoc = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -96,7 +97,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.68354F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.31645F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 141F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 142F));
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.btnSave, 2, 4);
@@ -141,7 +142,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(519, 123);
+            this.btnSave.Location = new System.Drawing.Point(518, 123);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(114, 23);
             this.btnSave.TabIndex = 10;
@@ -160,7 +161,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(383, 24);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(382, 24);
             this.tableLayoutPanel2.TabIndex = 15;
             // 
             // txtMaxMem
@@ -194,7 +195,7 @@
             // 
             // btnSetJava
             // 
-            this.btnSetJava.Location = new System.Drawing.Point(519, 33);
+            this.btnSetJava.Location = new System.Drawing.Point(518, 33);
             this.btnSetJava.Name = "btnSetJava";
             this.btnSetJava.Size = new System.Drawing.Size(123, 23);
             this.btnSetJava.TabIndex = 8;
@@ -216,7 +217,7 @@
             this.txtJavaHome.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtJavaHome.Location = new System.Drawing.Point(130, 33);
             this.txtJavaHome.Name = "txtJavaHome";
-            this.txtJavaHome.Size = new System.Drawing.Size(383, 20);
+            this.txtJavaHome.Size = new System.Drawing.Size(382, 20);
             this.txtJavaHome.TabIndex = 6;
             // 
             // txtESHome
@@ -224,12 +225,12 @@
             this.txtESHome.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtESHome.Location = new System.Drawing.Point(130, 3);
             this.txtESHome.Name = "txtESHome";
-            this.txtESHome.Size = new System.Drawing.Size(383, 20);
+            this.txtESHome.Size = new System.Drawing.Size(382, 20);
             this.txtESHome.TabIndex = 7;
             // 
             // btnSetEsHome
             // 
-            this.btnSetEsHome.Location = new System.Drawing.Point(519, 3);
+            this.btnSetEsHome.Location = new System.Drawing.Point(518, 3);
             this.btnSetEsHome.Name = "btnSetEsHome";
             this.btnSetEsHome.Size = new System.Drawing.Size(123, 23);
             this.btnSetEsHome.TabIndex = 9;
@@ -286,6 +287,10 @@
             this.btnStartService.Text = "Start Service";
             this.btnStartService.UseVisualStyleBackColor = true;
             this.btnStartService.Click += new System.EventHandler(this.btnStartService_Click);
+            // 
+            // folderBrowserDialog1
+            // 
+            this.folderBrowserDialog1.RootFolder = System.Environment.SpecialFolder.Recent;
             // 
             // tabControl1
             // 
@@ -351,16 +356,18 @@
             // 
             // tableLayoutPanel8
             // 
-            this.tableLayoutPanel8.ColumnCount = 2;
+            this.tableLayoutPanel8.ColumnCount = 3;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 408F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 89F));
             this.tableLayoutPanel8.Controls.Add(this.label6, 0, 0);
-            this.tableLayoutPanel8.Controls.Add(this.btnLoadConfig, 1, 0);
+            this.tableLayoutPanel8.Controls.Add(this.btnLoadConfig, 2, 0);
+            this.tableLayoutPanel8.Controls.Add(this.txtConfigLoc, 1, 0);
             this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(249, 30);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(635, 30);
             this.tableLayoutPanel8.TabIndex = 3;
             // 
             // label6
@@ -375,7 +382,7 @@
             // 
             // btnLoadConfig
             // 
-            this.btnLoadConfig.Location = new System.Drawing.Point(132, 3);
+            this.btnLoadConfig.Location = new System.Drawing.Point(549, 3);
             this.btnLoadConfig.Name = "btnLoadConfig";
             this.btnLoadConfig.Size = new System.Drawing.Size(75, 23);
             this.btnLoadConfig.TabIndex = 3;
@@ -573,6 +580,14 @@
             this.fswLogFile.EnableRaisingEvents = true;
             this.fswLogFile.SynchronizingObject = this;
             // 
+            // txtConfigLoc
+            // 
+            this.txtConfigLoc.Location = new System.Drawing.Point(141, 3);
+            this.txtConfigLoc.Name = "txtConfigLoc";
+            this.txtConfigLoc.Size = new System.Drawing.Size(402, 20);
+            this.txtConfigLoc.TabIndex = 4;
+            this.txtConfigLoc.TextChanged += new System.EventHandler(this.txtConfigLoc_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -624,7 +639,6 @@
     private System.Windows.Forms.Button btnSetEsHome;
     private System.Windows.Forms.Button btnSave;
     private System.Windows.Forms.Button btnStartService;
-		private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
     private System.Windows.Forms.Button btnStopService;
     private System.Windows.Forms.TextBox txtOutput;
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
@@ -655,6 +669,8 @@
         private System.Windows.Forms.Button btnManager;
         private System.Windows.Forms.Button btnInstall;
         private System.Windows.Forms.Button btnUninstall;
+        private System.Windows.Forms.TextBox txtConfigLoc;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
   }
 }
 
