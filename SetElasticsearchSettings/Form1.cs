@@ -224,7 +224,7 @@ namespace SetElasticsearchSettings
         {
             try
             {
-                using (StreamReader sr = new StreamReader(txtESHome.Text + ESConfig))
+                using (StreamReader sr = new StreamReader(ESConfig))
                 {
                     String line = sr.ReadToEnd();
                     txtConfig.Text = line.Replace("\n", "\r\n");
@@ -240,7 +240,7 @@ namespace SetElasticsearchSettings
         {
             try
             {
-                using (StreamWriter outfile = new StreamWriter(txtESHome.Text + ESConfig))
+                using (StreamWriter outfile = new StreamWriter(ESConfig))
                 {
                     outfile.Write(txtConfig.Text.Replace("\r", ""));
                     LoadYaml();
