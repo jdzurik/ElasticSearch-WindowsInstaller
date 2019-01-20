@@ -23,12 +23,14 @@ namespace SetElasticsearchSettings
         private string ESConfigBase = "\\Config\\elasticsearch.yml";
         private string ESConfig = "";
         private string ESHome = "";
+        private string path = "";
         public Form1()
         {
             InitializeComponent();
             txtJavaHome.Text = Environment.GetEnvironmentVariable("JAVA_HOME", EnvironmentVariableTarget.Machine);
             ESHome = Environment.GetEnvironmentVariable("ES_HOME", EnvironmentVariableTarget.Machine);
             txtESHome.Text = ESHome;
+            path = Environment.GetEnvironmentVariable("Path", EnvironmentVariableTarget.Machine);
 
             txtMinMem.Text = Environment.GetEnvironmentVariable("ES_MIN_MEM", EnvironmentVariableTarget.Machine);
             txtMaxMem.Text = Environment.GetEnvironmentVariable("ES_MAX_MEM", EnvironmentVariableTarget.Machine);
@@ -37,7 +39,7 @@ namespace SetElasticsearchSettings
 
                 if (!File.Exists(ESHome + ESConfigBase))
                 {
-                    MessageBox.Show("Please select config location...");
+                    MessageBox.Show("Please select elasticsearch.config ...");
                     DialogResult dr = openFileDialog1.ShowDialog();
                     if (dr == DialogResult.OK)
                     {
@@ -45,6 +47,9 @@ namespace SetElasticsearchSettings
                         ESConfig = openFileDialog1.FileName;
                     }
 
+                }
+                else {
+                    ESConfig = ESHome + ESConfigBase;
                 }
                 txtConfigLoc.Text = ESConfig;
                 loadConfig();
@@ -308,7 +313,7 @@ namespace SetElasticsearchSettings
 
                 using (Process proc = new Process())
                 {
-                    proc.StartInfo.FileName = ESHome + @"\bin\service.bat";
+                    proc.StartInfo.FileName = ESHome + @"\bin\elasticsearch-service.bat";
                     proc.StartInfo.UseShellExecute = false;
                     proc.StartInfo.RedirectStandardOutput = true;
                     proc.StartInfo.Arguments = string.Format(" " + action);
@@ -328,9 +333,63 @@ namespace SetElasticsearchSettings
             }
         }
 
+        private void RunInstallBat()
+        {
+            if (ESHome != "")
+            {
+
+                using (Process proc = new Process())
+                {
+                    proc.StartInfo.FileName = ESHome + @"\bin\elasticsearch.bat";
+                    proc.StartInfo.UseShellExecute = false;
+                    proc.StartInfo.RedirectStandardOutput = true;
+                    //proc.StartInfo.Arguments = string.Format(" " + action);
+                    //proc.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                    //proc.StartInfo.CreateNoWindow = true;
+                    
+                    proc.OutputDataReceived += Proc_OutputDataReceived;
+                    proc.Start();
+                    txtInstallBatOut.Text = txtInstallBatOut.Text + "\n\r\n\r" + DateTime.Now.ToString() + "\n\r\n\r";
+                    proc.BeginOutputReadLine();
+                    proc.WaitForExit();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Could not run elasticsearch.bat the ES_HOME Variable is not set. \n");
+            }
+        }
+
+        private void Proc_OutputDataReceived(object sender, DataReceivedEventArgs e)
+        {
+            if(e.Data != null)
+            txtInstallBatOut.Text = txtInstallBatOut.Text + e.Data + "\n";
+        }
+
         private void txtConfigLoc_TextChanged(object sender, EventArgs e)
         {
+           
             ESConfig = txtConfigLoc.Text;
+        }
+
+        private void txtConfigLoc_Enter(object sender, EventArgs e)
+        {
+            if (txtConfigLoc.Text == "")
+            {
+                MessageBox.Show("Please select elasticsearch.config ...");
+                DialogResult dr = openFileDialog1.ShowDialog();
+                if (dr == DialogResult.OK)
+                {
+
+                    ESConfig = openFileDialog1.FileName;
+                    txtConfigLoc.Text = ESConfig;
+                }
+            }
+        }
+
+        private void btnEsBat_Click(object sender, EventArgs e)
+        {
+            RunInstallBat();
         }
     }
 }

@@ -56,6 +56,7 @@
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
             this.btnLoadConfig = new System.Windows.Forms.Button();
+            this.txtConfigLoc = new System.Windows.Forms.TextBox();
             this.tabConfigText = new System.Windows.Forms.TabControl();
             this.tabCT = new System.Windows.Forms.TabPage();
             this.txtConfig = new System.Windows.Forms.TextBox();
@@ -73,8 +74,9 @@
             this.btnInstall = new System.Windows.Forms.Button();
             this.btnUninstall = new System.Windows.Forms.Button();
             this.fswLogFile = new System.IO.FileSystemWatcher();
-            this.txtConfigLoc = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.btnEsBat = new System.Windows.Forms.Button();
+            this.txtInstallBatOut = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -98,7 +100,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.68354F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.31645F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 142F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 143F));
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.btnSave, 2, 4);
@@ -110,6 +112,8 @@
             this.tableLayoutPanel1.Controls.Add(this.txtESHome, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnSetEsHome, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnEsBat, 2, 5);
+            this.tableLayoutPanel1.Controls.Add(this.txtInstallBatOut, 1, 5);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -143,7 +147,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(518, 123);
+            this.btnSave.Location = new System.Drawing.Point(517, 123);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(114, 23);
             this.btnSave.TabIndex = 10;
@@ -162,7 +166,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(382, 24);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(381, 24);
             this.tableLayoutPanel2.TabIndex = 15;
             // 
             // txtMaxMem
@@ -196,7 +200,7 @@
             // 
             // btnSetJava
             // 
-            this.btnSetJava.Location = new System.Drawing.Point(518, 33);
+            this.btnSetJava.Location = new System.Drawing.Point(517, 33);
             this.btnSetJava.Name = "btnSetJava";
             this.btnSetJava.Size = new System.Drawing.Size(123, 23);
             this.btnSetJava.TabIndex = 8;
@@ -218,7 +222,7 @@
             this.txtJavaHome.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtJavaHome.Location = new System.Drawing.Point(130, 33);
             this.txtJavaHome.Name = "txtJavaHome";
-            this.txtJavaHome.Size = new System.Drawing.Size(382, 20);
+            this.txtJavaHome.Size = new System.Drawing.Size(381, 20);
             this.txtJavaHome.TabIndex = 6;
             // 
             // txtESHome
@@ -226,12 +230,12 @@
             this.txtESHome.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtESHome.Location = new System.Drawing.Point(130, 3);
             this.txtESHome.Name = "txtESHome";
-            this.txtESHome.Size = new System.Drawing.Size(382, 20);
+            this.txtESHome.Size = new System.Drawing.Size(381, 20);
             this.txtESHome.TabIndex = 7;
             // 
             // btnSetEsHome
             // 
-            this.btnSetEsHome.Location = new System.Drawing.Point(518, 3);
+            this.btnSetEsHome.Location = new System.Drawing.Point(517, 3);
             this.btnSetEsHome.Name = "btnSetEsHome";
             this.btnSetEsHome.Size = new System.Drawing.Size(123, 23);
             this.btnSetEsHome.TabIndex = 9;
@@ -359,7 +363,7 @@
             // 
             this.tableLayoutPanel8.ColumnCount = 3;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 408F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 438F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 89F));
             this.tableLayoutPanel8.Controls.Add(this.label6, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.btnLoadConfig, 2, 0);
@@ -390,6 +394,15 @@
             this.btnLoadConfig.Text = "Load Config";
             this.btnLoadConfig.UseVisualStyleBackColor = true;
             this.btnLoadConfig.Click += new System.EventHandler(this.btnLoadConfig_Click);
+            // 
+            // txtConfigLoc
+            // 
+            this.txtConfigLoc.Location = new System.Drawing.Point(111, 3);
+            this.txtConfigLoc.Name = "txtConfigLoc";
+            this.txtConfigLoc.Size = new System.Drawing.Size(340, 20);
+            this.txtConfigLoc.TabIndex = 4;
+            this.txtConfigLoc.TextChanged += new System.EventHandler(this.txtConfigLoc_TextChanged);
+            this.txtConfigLoc.Enter += new System.EventHandler(this.txtConfigLoc_Enter);
             // 
             // tabConfigText
             // 
@@ -581,18 +594,28 @@
             this.fswLogFile.EnableRaisingEvents = true;
             this.fswLogFile.SynchronizingObject = this;
             // 
-            // txtConfigLoc
-            // 
-            this.txtConfigLoc.Location = new System.Drawing.Point(141, 3);
-            this.txtConfigLoc.Name = "txtConfigLoc";
-            this.txtConfigLoc.Size = new System.Drawing.Size(402, 20);
-            this.txtConfigLoc.TabIndex = 4;
-            this.txtConfigLoc.TextChanged += new System.EventHandler(this.txtConfigLoc_TextChanged);
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.DefaultExt = "yml";
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // btnEsBat
+            // 
+            this.btnEsBat.Location = new System.Drawing.Point(517, 159);
+            this.btnEsBat.Name = "btnEsBat";
+            this.btnEsBat.Size = new System.Drawing.Size(123, 23);
+            this.btnEsBat.TabIndex = 17;
+            this.btnEsBat.Text = "Run elasticsearch.bat";
+            this.btnEsBat.UseVisualStyleBackColor = true;
+            this.btnEsBat.Click += new System.EventHandler(this.btnEsBat_Click);
+            // 
+            // txtInstallBatOut
+            // 
+            this.txtInstallBatOut.Location = new System.Drawing.Point(130, 159);
+            this.txtInstallBatOut.Multiline = true;
+            this.txtInstallBatOut.Name = "txtInstallBatOut";
+            this.txtInstallBatOut.Size = new System.Drawing.Size(368, 163);
+            this.txtInstallBatOut.TabIndex = 18;
             // 
             // Form1
             // 
@@ -678,6 +701,8 @@
         private System.Windows.Forms.TextBox txtConfigLoc;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-  }
+        private System.Windows.Forms.Button btnEsBat;
+        private System.Windows.Forms.TextBox txtInstallBatOut;
+    }
 }
 
