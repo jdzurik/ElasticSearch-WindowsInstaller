@@ -23,11 +23,16 @@ namespace SetElasticsearchSettings
         private string ESConfigBase = "\\Config\\elasticsearch.yml";
         private string ESConfig = "";
         private string ESHome = "";
+        private string JAVAHome = "";
         private string path = "";
+
+        delegate void SetTextCallback(string text);
+
         public Form1()
         {
             InitializeComponent();
-            txtJavaHome.Text = Environment.GetEnvironmentVariable("JAVA_HOME", EnvironmentVariableTarget.Machine);
+            JAVAHome = Environment.GetEnvironmentVariable("JAVA_HOME", EnvironmentVariableTarget.Machine);
+            txtJavaHome.Text = JAVAHome;
             ESHome = Environment.GetEnvironmentVariable("ES_HOME", EnvironmentVariableTarget.Machine);
             txtESHome.Text = ESHome;
             path = Environment.GetEnvironmentVariable("Path", EnvironmentVariableTarget.Machine);
@@ -80,19 +85,19 @@ namespace SetElasticsearchSettings
             {
 
 
-                DirectoryInfo esdi = new DirectoryInfo(txtESHome.Text);
-                DirectorySecurity myDirectorySecurity = esdi.GetAccessControl();
-                string User = "NETWORK SERVICE";
-                myDirectorySecurity.AddAccessRule(new FileSystemAccessRule(User,
-                                                                                                FileSystemRights.FullControl, AccessControlType.Allow));
-                esdi.SetAccessControl(myDirectorySecurity);
+                //DirectoryInfo esdi = new DirectoryInfo(txtESHome.Text);
+                //DirectorySecurity myDirectorySecurity = esdi.GetAccessControl();
+                //string User = "NETWORK SERVICE";
+                //myDirectorySecurity.AddAccessRule(new FileSystemAccessRule(User, FileSystemRights.FullControl, AccessControlType.Allow));
+                //esdi.SetAccessControl(myDirectorySecurity);
 
-
+                JAVAHome = txtJavaHome.Text;
+                ESHome = txtESHome.Text;
                 Environment.SetEnvironmentVariable("JAVA_HOME", txtJavaHome.Text, EnvironmentVariableTarget.Machine);
                 Environment.SetEnvironmentVariable("ES_HOME", txtESHome.Text, EnvironmentVariableTarget.Machine);
 
-                Environment.SetEnvironmentVariable("ES_MIN_MEM", txtMinMem.Text, EnvironmentVariableTarget.Machine);
-                Environment.SetEnvironmentVariable("ES_MAX_MEM", txtMaxMem.Text, EnvironmentVariableTarget.Machine);
+                //Environment.SetEnvironmentVariable("ES_MIN_MEM", txtMinMem.Text, EnvironmentVariableTarget.Machine);
+                //Environment.SetEnvironmentVariable("ES_MAX_MEM", txtMaxMem.Text, EnvironmentVariableTarget.Machine);
                 MessageBox.Show("Settings Saved!");
             }
             catch (Exception ex)
@@ -322,7 +327,7 @@ namespace SetElasticsearchSettings
                     txtOutput.Text = "\n" + proc.StandardOutput.ReadToEnd() + "\n\r\n\r" + DateTime.Now.ToString() + "\n\r\n\r";
                     if (action == "start")
                     {
-                        txtOutput.Text += "If this is the first time starting the service please use the Manage button to make sure it is set to automatic start up.";
+                        txtOutput.Text += "If this is the first time starting the service please use the [Manage] button if you would like it set to 'Automatic' start up.";
                     }
                     proc.WaitForExit();
                 }
@@ -335,24 +340,28 @@ namespace SetElasticsearchSettings
 
         private void RunInstallBat()
         {
-            if (ESHome != "")
+            if (ESHome != "" && JAVAHome != "")
             {
 
+                //string strCmdText;
+                //strCmdText = "/C "+ ESHome + @"\bin\elasticsearch.bat";
+                //System.Diagnostics.Process.Start("CMD.exe", strCmdText);
+                txtInstallBatOut.Text = txtInstallBatOut.Text + "A cmd window should open with the details: \n\r\n\r" + DateTime.Now.ToString() + "\n\r\n\r";
                 using (Process proc = new Process())
                 {
-                    proc.StartInfo.FileName = ESHome + @"\bin\elasticsearch.bat";
-                    proc.StartInfo.UseShellExecute = false;
-                    proc.StartInfo.RedirectStandardOutput = true;
-                    //proc.StartInfo.Arguments = string.Format(" " + action);
+                    proc.StartInfo.FileName = "CMD.EXE"; 
+                    proc.StartInfo.Arguments = "/K "+ ESHome + @"\bin\elasticsearch.bat";
+                    //proc.StartInfo.UseShellExecute = true;
+                    //proc.StartInfo.RedirectStandardOutput = true;
                     //proc.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-                    //proc.StartInfo.CreateNoWindow = true;
-                    
-                    proc.OutputDataReceived += Proc_OutputDataReceived;
+                    //proc.StartInfo.CreateNoWindow = false;
+
                     proc.Start();
-                    txtInstallBatOut.Text = txtInstallBatOut.Text + "\n\r\n\r" + DateTime.Now.ToString() + "\n\r\n\r";
-                    proc.BeginOutputReadLine();
+                    
+                    //proc.BeginOutputReadLine();
                     proc.WaitForExit();
                 }
+                
             }
             else
             {
@@ -363,7 +372,24 @@ namespace SetElasticsearchSettings
         private void Proc_OutputDataReceived(object sender, DataReceivedEventArgs e)
         {
             if(e.Data != null)
-            txtInstallBatOut.Text = txtInstallBatOut.Text + e.Data + "\n";
+                SetInstallBatOutText( e.Data + "\n");
+        }
+
+
+        private void SetInstallBatOutText(string text)
+        {
+            // InvokeRequired required compares the thread ID of the
+            // calling thread to the thread ID of the creating thread.
+            // If these threads are different, it returns true.
+            if (this.txtInstallBatOut.InvokeRequired)
+            {
+                SetTextCallback d = new SetTextCallback(SetInstallBatOutText);
+                this.Invoke(d, new object[] { text });
+            }
+            else
+            {
+                this.txtInstallBatOut.Text = this.txtInstallBatOut.Text + text;
+            }
         }
 
         private void txtConfigLoc_TextChanged(object sender, EventArgs e)
@@ -390,6 +416,21 @@ namespace SetElasticsearchSettings
         private void btnEsBat_Click(object sender, EventArgs e)
         {
             RunInstallBat();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblJHmsg_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtConfig_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
