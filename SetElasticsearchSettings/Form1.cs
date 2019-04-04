@@ -432,5 +432,22 @@ namespace SetElasticsearchSettings
         {
 
         }
+
+        private void btnSaveConfig_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                using (StreamWriter outfile = new StreamWriter(ESConfig))
+                {
+                    outfile.Write(txtConfig.Text.Replace("\r", ""));
+                    LoadYaml();
+                    MessageBox.Show("The file has been saved.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("The file could not be saved:\n" + ex.Message);
+            }
+        }
     }
 }
