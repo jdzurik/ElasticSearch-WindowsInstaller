@@ -566,16 +566,16 @@
             this.lblFirewallRAL.AutoSize = true;
             this.lblFirewallRAL.Location = new System.Drawing.Point(3, 0);
             this.lblFirewallRAL.Name = "lblFirewallRAL";
-            this.lblFirewallRAL.Size = new System.Drawing.Size(235, 13);
+            this.lblFirewallRAL.Size = new System.Drawing.Size(231, 13);
             this.lblFirewallRAL.TabIndex = 19;
-            this.lblFirewallRAL.Text = "Enter Remote Addresses below to alow access: ";
+            this.lblFirewallRAL.Text = "Enter remote addresses below to allow access: ";
             // 
             // txtRemoteAddress
             // 
             this.txtRemoteAddress.Location = new System.Drawing.Point(3, 23);
             this.txtRemoteAddress.Multiline = true;
             this.txtRemoteAddress.Name = "txtRemoteAddress";
-            this.txtRemoteAddress.Size = new System.Drawing.Size(413, 100);
+            this.txtRemoteAddress.Size = new System.Drawing.Size(482, 108);
             this.txtRemoteAddress.TabIndex = 20;
             // 
             // label8
