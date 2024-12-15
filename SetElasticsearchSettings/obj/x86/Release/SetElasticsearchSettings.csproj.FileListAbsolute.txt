@@ -44,6 +44,7 @@ C:\Dev\ElasticSearch-WindowsInstaller\SetElasticsearchSettings\bin\Release\YamlU
 C:\Dev\ElasticSearch-WindowsInstaller\SetElasticsearchSettings\obj\x86\Release\SetElasticsearchSettings.Form1.resources
 C:\Dev\ElasticSearch-WindowsInstaller\SetElasticsearchSettings\obj\x86\Release\SetElasticsearchSettings.Properties.Resources.resources
 C:\Dev\ElasticSearch-WindowsInstaller\SetElasticsearchSettings\obj\x86\Release\SetElasticsearchSettings.csproj.GenerateResource.Cache
-C:\Dev\ElasticSearch-WindowsInstaller\SetElasticsearchSettings\obj\x86\Release\SetElasticsearchSettings.csprojAssemblyReference.cache
 C:\Dev\ElasticSearch-WindowsInstaller\SetElasticsearchSettings\obj\x86\Release\SetElasticsearchSettings.csproj.CoreCompileInputs.cache
-C:\Dev\ElasticSearch-WindowsInstaller\SetElasticsearchSettings\obj\x86\Release\SetElasticsearchSettings.csproj.CopyComplete
+C:\Dev\ElasticSearch-WindowsInstaller\SetElasticsearchSettings\bin\Release\SetElasticsearchSettings.exe.config
+C:\Dev\ElasticSearch-WindowsInstaller\SetElasticsearchSettings\obj\x86\Release\SetElasticsearchSettings.csproj.AssemblyReference.cache
+C:\Dev\ElasticSearch-WindowsInstaller\SetElasticsearchSettings\obj\x86\Release\SetElast.A33FAD52.Up2Date
